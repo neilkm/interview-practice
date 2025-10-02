@@ -51,6 +51,7 @@ namespace BinarySearch
 				std::cout << "Received: " << result << std::endl; 
 			}
 		}
-		std::cout << passed << "/" << totalCaseCount << " cases passed." << std::endl;
+		std::cout << passed << "/" << totalCaseCount << " cases passed." << std::endl
+<< std::endl << std::endl;
 	}
 }//namespace
