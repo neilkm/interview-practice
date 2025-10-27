@@ -1,8 +1,11 @@
-#include "bst_unit_test.h"
-#include "tst_palindrome.h"
+#include "bst.h"
+#include "palindrome.h"
+
+//auto palindrome = Palindrome::Solution();
 
 int main() {
-	BinarySearch::testBst();
-	Palindrome::testPalindrome();
+    auto bst = BinarySearch::Solution();
+    bst.testBst();
+	//palindrome.testPalindrome();
 	return 0;
 }

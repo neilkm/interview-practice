@@ -1,23 +1,20 @@
-# Cmake for LeetCode directory
+# CMake for LeetCode directory
 
-# library target for use by top level app
+# Create a static library for this module
 add_library(LeetCode
-	SearchInsert/bst.cpp 
-	IsIntPalindrome/palindrome.cpp 
-    # make a header for the test with test class declaration
-    # make a cpp for the test class with implementation
-    # include header and call methods in main to run tests for this dir build/run
-    # add_library with test class cpp
-    # include test class header in higher level main
-    # run method to show all tests output
+    SearchInsert/bst.cpp
+    IsIntPalindrome/palindrome.cpp
 )
 
-# public headers in include/
-target_include_directories( LeetCode PUBLIC 
-	${CMAKE_CURRENT_SOURCE_DIR}/SearchInsert
-	${CMAKE_CURRENT_SOURCE_DIR}/IsIntPalindrome
+# Public include directories for headers
+target_include_directories(LeetCode PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/SearchInsert
+    ${CMAKE_CURRENT_SOURCE_DIR}/IsIntPalindrome
 )
 
+# Test executable for LeetCode
 add_executable(LeetCode_tst main.cpp)
+
+# Link test executable to this module's library
 target_link_libraries(LeetCode_tst PRIVATE LeetCode)
 

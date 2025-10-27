@@ -1,0 +1,51 @@
+# Notes for 'Find Missing' online assessment problem
+
+## --- Set up ---
+
+Problem:
+Given sorted ascending vector of ints, nums, and count of distinct nums
+, n, return mising number or 0 if none missing. 
+
+Given:
+vector containing n distinct nums sorted ascending
+
+Constraints:
+n == num.length
+0 <= nums[i] <= n
+nums is sorted ascending increasing by 1
+
+Return:
+the only number in the range [0,n] that is missing
+0 if none missing
+
+Goal:
+O(n) time, 0(1) space, try to find a better solution
+
+
+## --- Answer ---
+
+Assumptions:
+maximum of one number missing, minimum of no numbers missing
+ints in nums vector should only go up by 1 unless missing
+n is distinct values count, should also be length of input vector
+if a value in nums vector is more than what it should be given its index,
+    then we know that the missing number must be before that index
+
+Approach:
+Can use binary search to get a O(logn) time complexity.
+
+Implementation:
+The expected value for any given index in nums vector should be:
+    the first value + current index (index starts at 0)
+If the last value in nums vector is more than expected,
+    then we know that a number is missing, else we can return 0
+If the last value in nums vector is less than expected,
+    then we know there is something wrong with the test case,
+    an extra number must have been added instead of removed
+Perform binary search traversal of nums vector, to check if values are expected
+If current value being compared is greater than expected then check left,
+    else check right
+Find index where missing value should be, return +1 to value at found index-1
+Keep temp int variables, dont create a new vector, space should be O(1)
+Use binary search to cut search area in half every cycle, time should be O(logn)
+

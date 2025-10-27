@@ -14,11 +14,14 @@ set(CMAKE_CXX_EXTENSIONS OFF) # only relies on standard C++ features (-std=c++17
 
 # include subdirectories
 add_subdirectory(LeetCode)
+add_subdirectory(OA_October)
 
 # executable target from source file
 add_executable(InterviewPrep main.cpp)
 
 # link libraries
 target_link_libraries(
-	${TARGET} PUBLIC LeetCode
+    ${TARGET} PRIVATE 
+    LeetCode
+     OA_October
 )
