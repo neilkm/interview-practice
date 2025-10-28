@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/NeilK/git/interview-practice/code/LeetCode/SearchInsert -I/Users/NeilK/git/interview-practice/code/LeetCode/IsIntPalindrome
+CXX_INCLUDES = -I/Users/NeilK/git/interview-practice/code/LeetCode/SearchInsert -I/Users/NeilK/git/interview-practice/code/LeetCode/IsIntPalindrome -I/Users/NeilK/git/interview-practice/code/LeetCode/../Solution
 
 CXX_FLAGSx86_64 = -std=c++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
 

@@ -8,7 +8,7 @@ BinarySearch::Solution binarySearch;
 Palindrome::Solution palindrome;
 
 // October OA classes
-FindMissing::Solution findMissing;
+PracticeProblems::FindMissing findMissing;
 
 int main(int argc, char* argv[]) 
 {

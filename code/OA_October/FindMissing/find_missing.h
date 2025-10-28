@@ -2,10 +2,10 @@
 #include <vector>
 #include <iostream>
 
-namespace FindMissing 
+namespace PracticeProblems 
 {
 
-	class Solution
+	class FindMissing
 	{
 		public:
             //problem intro

@@ -12,6 +12,7 @@ void printLine(std::string lineStr) {
 }
 
 std::string elideString(std::string str, int length) {
+    str.resize(length, ' ');
     return str;
 }
 
@@ -42,8 +43,9 @@ void printTestCaseResult(std::vector<std::string> caseResult, bool passed) {
 
 void endTestHarness(int passed, int totalCases) {
     printLine(k_lineSeparator);
-    std::cout << "All tests ran."
-    std::cout << passed << " out of " << totalCases << " passed."
+    std::cout << "All tests ran." << std::endl;
+    std::cout << passed << " out of " 
+    << totalCases << " test cases passed." << std::endl;
     printLine(k_lineSeparator);
 }
 
@@ -51,16 +53,17 @@ void endTestHarness(int passed, int totalCases) {
 //
 
 Solution::Solution() : 
+
 m_testCases({
     {"pass case", 1, 1},
     {"fail case", 1, 0},
 }),
-m_problemIntro(
-    R"(
+
+m_problemIntro(R"(
 Problem Class.
 
 blah blah blah
-    )"),
+)")
 {}
 
 int Solution::problem(int x) {
@@ -73,6 +76,17 @@ void Solution::runTests() {
     
     startTestHarness(m_problemIntro, totalCases);
     // run test for all test cases
+    std::vector<std::string> testResult;
+    for (int i = 0; i < totalCases; i++) {
+        testResult[0] = m_testCases[i].testName;
+        testResult[1] = m_testCases[i].expected;
+
+        //run problem with params
+        testResult[2] = problem(m_testCases[i].param);
+        bool testPassed = (testResult[1] == testResult[2]);
+        passed = (testPassed)? passed+1 : passed;
+        printTestCaseResult(testResult, testPassed);
+    }
     endTestHarness(passed, totalCases);
 }
 

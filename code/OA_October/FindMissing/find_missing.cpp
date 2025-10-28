@@ -1,9 +1,9 @@
 #include "find_missing.h"
 
-namespace FindMissing
+namespace PracticeProblems
 {
 // -- My answer --
-int Solution::findMissing(std::vector<int> nums, int n)
+int FindMissing::findMissing(std::vector<int> nums, int n)
 	{
         int expected = nums[0] + (n-1); //expected end value
         if (nums[-1] == expected) return 0; //none missing
@@ -25,7 +25,7 @@ int Solution::findMissing(std::vector<int> nums, int n)
         return nums[left-1]+1;
 	}
 // -- End answer --
-	void Solution::testFindMissing() {
+	void FindMissing::testFindMissing() {
         std::cout << m_problem_intro << std::endl;
         std::cout << "Running Tests testFindMissing():" << std::endl;
 		
