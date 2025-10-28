@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libLeetCode.a CMakeFiles/LeetCode.dir/SearchInsert/bst.cpp.o CMakeFiles/LeetCode.dir/IsIntPalindrome/palindrome.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libLeetCode.a
