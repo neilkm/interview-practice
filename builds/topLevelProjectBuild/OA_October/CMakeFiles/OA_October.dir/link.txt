@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libOA_October.a CMakeFiles/OA_October.dir/FindMissing/find_missing.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libOA_October.a
